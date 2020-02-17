@@ -7,8 +7,8 @@ import '../../resources/styles/home/homeLeft.scss';
 function LeftHome() {
     
   return (
-    <div  className="left-home content-page">
-      <button className="btn btn-danger btn_run">Cargar tu cv</button>
+    <div  className="left-home">
+      <button className="btn btn_run">Cargar tu cv</button>
     </div>
   );
 }
