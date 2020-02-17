@@ -7,7 +7,6 @@ function Home() {
   return (
     <div className="row content-home">
       <LefHome/>
-      <div className="back_1">asdasd</div>
     </div>
   );
 }
