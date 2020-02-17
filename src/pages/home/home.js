@@ -5,7 +5,7 @@ import LefHome from './leftHome'
 
 function Home() {
   return (
-    <div className="row content-home">
+    <div className="row content-home no-gutters">
       <LefHome/>
     </div>
   );
