@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 npm install --save react-router-dom
 
 npm install --save bootstrap
 
-=======
-npm install --save react-router-dom
-
-npm install --save bootstrap
-
->>>>>>> 7b37c4444486b9c0497d4347b124b18c97ab2a78
 npm install node-sass
+
+npm install lottie-web --save

@@ -106,5 +106,12 @@
     100% {left: 0}
   }
 
-  // border effect
+  // change color
+  .color-red{
+      color:$color-red;
+  }
+
+  .border-red{
+      stroke: $color-red !important;
+  }
   

@@ -1,4 +1,4 @@
-import React ,{useState, Fragment, useEffect} from 'react';
+import React ,{ useState, Fragment } from 'react';
 import {useHistory} from 'react-router-dom';
 
 // components
@@ -32,7 +32,6 @@ function LeftHome() {
         btn_cv.classList.remove('shake_Button');
         let newArray = [...lives];
         newArray[num_lives].hasLife = false;
-        console.log(newArray);
         setLives(newArray);
       });
     }else{
