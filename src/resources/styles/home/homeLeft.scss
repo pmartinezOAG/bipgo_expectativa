@@ -35,8 +35,54 @@
             }
         }
     }
+    /**/
+    .circle-counter{
+        width: 400px;
+        min-height: 400px;
+        padding: 3rem;
+        color:$color-blue;
+        border-radius: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        h4,h1{
+            font-weight:600;
+            margin-bottom: 0;
+        }
+        h1{
+            font-size: 5rem;
+            line-height: 4rem;
+        }
+        h5{
+            margin-top: 2rem;
+        }
+        .circle{
+            position: absolute;
+            top:0;
+            left: 0;
+            svg{
+                width: 400px;
+                .e-c-base {
+                    fill: none;
+                    stroke: $color-white;
+                    stroke-width: 8px
+                  }
+                   
+                  .e-c-progress {
+                    fill: none;
+                    stroke: $color-blue;
+                    stroke-width: 8px;
+                    transition: stroke-dashoffset 0.7s;
+                  }
+            }
+        }
+    }
 }
 
+// shake button effect
 .shake_Button{
     animation-name: shakeAnim;
     animation-duration: 0.3s;
@@ -59,3 +105,6 @@
     91% {left: -3px}
     100% {left: 0}
   }
+
+  // border effect
+  

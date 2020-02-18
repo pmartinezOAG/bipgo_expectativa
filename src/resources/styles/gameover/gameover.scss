@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.game-over{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $color-red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:$color-white;
+    h1{
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 4rem;
+        text-align: center;
+        padding: 1rem 5rem;
+        border:0.5rem solid $color-white;
+        border-radius: 6rem;
+    }
+    p{
+        margin: 50px 0 20px 0;
+    }
+    a{
+        font-weight: 600;
+        color: $color-white;
+        border:0.2rem solid $color-white;
+        padding: 0.5rem 2rem;
+        border-radius: 3rem;
+        transition: 0.3s all;
+    }
+    a:hover{
+        text-decoration: none;
+        color: $color-red;
+        background-color: $color-white;
+        transform: scale(1.03);
+    }
+}
