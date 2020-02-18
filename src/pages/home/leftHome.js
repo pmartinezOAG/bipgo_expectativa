@@ -3,11 +3,16 @@ import {useHistory} from 'react-router-dom';
 
 // components
 import Timer from './timer';
+
 //Styles
 import '../../resources/styles/home/homeLeft.scss';
 // images
 import bipgo_iso from '../../resources/images/bipgo_iso.png';
 import bipgo_fail from '../../resources/images/bipgo_fail.png';
+
+//delete
+import Bigo from '../../components/Bigo/bigo';
+
 
 let num_lives = 3;
 
@@ -60,8 +65,9 @@ function LeftHome() {
                       return <div key={life.id}><img className='img-fluid' src={img_picked} alt="Bipgo" /></div>
                     })
                   }
-              </div> 
+              </div>
             </div>
+            <Bigo/> 
           </Fragment>
         ):(
           <Timer seconds={10} userStatus={gameStatus}/>
