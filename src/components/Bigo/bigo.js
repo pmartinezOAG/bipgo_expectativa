@@ -1,50 +1,51 @@
 import React, { Component } from 'react';
 import lottie from 'lottie-web';
+
 import mountingAnimation from './animations/mounting.json';
 import speakAnimation from './animations/speaking.json';
 
 let animObj = null;
+let animObj2 = null;
 
 class Bigo  extends Component {
-
+     
     constructor(props){
         super(props);
-        this.state = {
-            animationState: mountingAnimation
-        }
-        this.changeAnimation = this.changeAnimation.bind(this);
-        this.repeatAnimation = this.repeatAnimation.bind(this);
     }
 
     componentDidMount(){
-        this.repeatAnimation()
-    }
-
-    repeatAnimation(){
-        animObj = lottie.loadAnimation({
+        
+        const animData= {
             container:  this.animBox,
             renderer:'svg',
             loop:false,
             autoplay:true,
-            animationData: this.state.animationState
+            animationData: mountingAnimation
+        }
+        animObj = lottie.loadAnimation(animData);
+        //animObj.stop();
+        animObj.addEventListener('complete', () => {
+            console.log('la animacion ha concluido');
+            const animDataSpeak = {
+                container:  this.animBox2,
+                renderer:'svg',
+                loop:true,
+                autoplay:true,
+                animationData: speakAnimation
+            }
+            //
+            animObj2 = lottie.loadAnimation(animDataSpeak);
+            
         });
-        console.log(this.state.animationState)
+        
     }
 
-    changeAnimation(){
-        this.setState({
-            animationState:speakAnimation
-        });
-      
-        //animObj.play();
-        console.log(this.state.animationState)
-    }
 
     render(){
         return(
-            <div>
-                <div ref={ ref => this.animBox = ref}></div>   
-                <button onClick={this.changeAnimation}>Change Animation</button>   
+            <div className="content-bigo">
+                <div className="container-anim" ref={ ref => this.animBox = ref}></div>   
+                <div className="container-anim" ref={ ref => this.animBox2 = ref}></div>
             </div>
         )
     }

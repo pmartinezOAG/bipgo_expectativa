@@ -2,7 +2,28 @@
 
 .content-home{
     min-height: 100vh;
-    div{
+    div {
         width: 50%;
+    }
+    .title-home{
+        position: absolute;
+        top:4%;
+        left: 3%;
+        z-index: 100;
+        color: $color-black;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 1.8rem;
+        .space-txt{
+            margin-left: 4px;
+        }
+        .tip-big{
+            font-size: 6rem;
+            line-height: 0rem;
+            margin-top: -4px;
+            span{
+                color:$color-red;
+            }
+        }
     }
 }
