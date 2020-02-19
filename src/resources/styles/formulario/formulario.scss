@@ -2,6 +2,58 @@
 
 .left-div {
   background-color: $color-white;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", sans-serif;
+  display: flex;
+
+  .message-container {
+    margin-left: 25%;
+    margin-top: 4%;
+    font-weight: 600;
+
+    .big-type {
+      font-size: 6.6rem;
+      letter-spacing: -7px;
+    }
+
+    .medium-type {
+        display: flex;
+        margin-top: -3%;
+        margin-left: 4%;
+
+        .letra-roja {
+            color: $color-red;
+        }
+
+        span { 
+            font-size: 2.4rem;
+        }
+    }
+
+    .little-type {
+        font-size: 2rem;
+        margin-top: -8%;
+        margin-left: 4%;
+    }
+  }
+
+  .paragraph-container {
+    left: 13.5%;
+    top: 42%;
+    width: 23%;
+    position: absolute;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .bigo-container {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    width: 75%;
+  }
+
+
 }
 .right-div {
   background-color: $color-red;
@@ -33,34 +85,33 @@
     }
 
     input {
-        display: block;
-        margin: auto;
-        border: none;
-        border-radius: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
+      display: block;
+      margin: auto;
+      border: none;
+      border-radius: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
 
-        @extend .form-size-elements;
+      @extend .form-size-elements;
     }
   }
 
   .submit-button {
-      color: $color-white;
-      background: transparent;
-      border: solid 2px $color-white;
-      border-radius: 50px;
-      @extend .form-size-elements;
-      font-weight: 600;
+    color: $color-white;
+    background: transparent;
+    border: solid 2px $color-white;
+    border-radius: 50px;
+    @extend .form-size-elements;
+    font-weight: 600;
   }
 }
 
 .form-size-elements {
-    width: 180%;
-    height: 6vh;
-    max-height: 44px;
+  width: 180%;
+  height: 6vh;
+  max-height: 44px;
 }
 
-
 .message-container {
-    font-size: 4rem;
+  font-size: 4rem;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form'
 
 import '../../resources/styles/formulario/formulario.scss';
+import Bigo from '../../components/Bigo/bigo';
 
 function Formulario() {
 
@@ -11,9 +12,28 @@ function Formulario() {
   return (
     <div className="row content-home no-gutters">
       <div className="left-div">
+
         <div className="message-container">
-          Tomaste
-        </div> 
+          <div className="big-type">
+            Tomaste
+          </div>
+          <div className="little-type">
+            la
+          </div>
+          <div className="medium-type">
+            <span>mejor</span> <span className="letra-roja">decisión</span>
+          </div>
+        </div>
+
+        <div className="paragraph-container">
+          <span>Se uno de los primeros en disfrutar la aplicación que cambiará la forma de conseguir empleo</span>
+        </div>
+
+        <div className="bigo-container">
+          <Bigo />
+        </div>
+
+
       </div>
 
       <div className="right-div">
@@ -22,7 +42,7 @@ function Formulario() {
 
             <div className="form-group">
               <label>Nombres</label>
-              <input name="nombres" defaultValue="test" ref={register} />
+              <input name="nombres" ref={register} />
             </div>
 
             <div className="form-group">
@@ -38,7 +58,7 @@ function Formulario() {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                   message: "invalid email address"
                 }
-              })}/>
+              })} />
               {errors.email && <span>This field is required</span>}
             </div>
 
