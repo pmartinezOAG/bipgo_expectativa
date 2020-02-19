@@ -1,3 +1,16 @@
 .content-page{
   min-height: 100vh;
 }
+
+.content-bigo{
+  width: 400px;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  .container-anim{
+    width: 100% !important;
+    position: absolute;
+    top:0;
+    left: 0;
+  }
+}

@@ -67,7 +67,7 @@ function LeftHome() {
                   }
               </div>
             </div>
-            <Bigo/> 
+            
           </Fragment>
         ):(
           <Timer seconds={10} userStatus={gameStatus}/>
