@@ -1,5 +1,24 @@
 @import "../variables.scss";
 
+.animation-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-white;
+  z-index: 1000;
+  display: flex;
+
+  .bigo-container {
+    width: 40%;
+    margin: auto;
+  }
+}
+
+.hide-div-container {
+  z-index: 0;
+  display: none;
+}
+
 .left-div {
   background-color: $color-white;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", sans-serif;
@@ -10,30 +29,38 @@
     margin-left: 25%;
     margin-top: 4%;
     font-weight: 600;
+    transform-origin: right top;
+    opacity: 0;
+
+    .showMessage {
+      transition: 0.3s all;
+    }
 
     .big-type {
-      font-size: 6.6rem;
+      width: 0px;
+      font-size: 8rem;
       letter-spacing: -7px;
+      transition: 0.3s all;
     }
 
     .medium-type {
-        display: flex;
-        margin-top: -3%;
-        margin-left: 4%;
+      display: flex;
+      margin-top: -3%;
+      margin-left: 4%;
 
-        .letra-roja {
-            color: $color-red;
-        }
+      .letra-roja {
+        color: $color-red;
+      }
 
-        span { 
-            font-size: 2.4rem;
-        }
+      span {
+        font-size: 2.4rem;
+      }
     }
 
     .little-type {
-        font-size: 2rem;
-        margin-top: -8%;
-        margin-left: 4%;
+      font-size: 2rem;
+      margin-top: -8%;
+      margin-left: 4%;
     }
   }
 
@@ -45,6 +72,8 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+    transition-delay: 2s;
+    opacity: 0;
   }
 
   .bigo-container {
@@ -53,13 +82,20 @@
     top: 50%;
     width: 40%;
   }
-
-
 }
 .right-div {
   background-color: $color-red;
   display: flex;
   width: 50%;
+  position: absolute;
+  left: 50%;
+  height: 100vh;
+  transition: 0.3s all;
+}
+
+.hide-right-div {
+  left: 110%;
+  transition: 0.3s all;
 }
 
 .form-container {
@@ -80,6 +116,7 @@
   .form-group {
     width: 100%;
     margin-bottom: 15%;
+    opacity: 0;
     label {
       margin: auto;
       display: block;
@@ -105,6 +142,7 @@
     border-radius: 50px;
     @extend .form-size-elements;
     font-weight: 600;
+    opacity: 0;
   }
 }
 
@@ -116,4 +154,24 @@
 
 .message-container {
   font-size: 4rem;
+}
+
+.back-anim {
+  opacity: 1 !important;
+  animation: enterGameOver 0.5s ease;
+}
+
+.back-anim2 {
+  animation: enterGameOver 0.5s ease;
+}
+
+@keyframes enterGameOver {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
 }

@@ -6,20 +6,30 @@ import speakAnimation from './animations/speaking.json';
 
 let animObj = null;
 let animObj2 = null;
+let playAnimation = true;
 
 class Bigo  extends Component {
      
     constructor(props){
         super(props);
+        this.state = {
+            startAnimation: false
+        }
     }
 
+    
+
     componentDidMount(){
-        
+        if (this.props.activeAnimation !== undefined) {
+            playAnimation = false;
+            setTimeout(() => { animObj.play() }, 2250);
+        }
+
         const animData= {
             container:  this.animBox,
             renderer:'svg',
             loop:false,
-            autoplay:true,
+            autoplay: playAnimation,
             animationData: mountingAnimation
         }
         animObj = lottie.loadAnimation(animData);
