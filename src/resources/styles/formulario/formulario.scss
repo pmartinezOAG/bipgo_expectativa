@@ -1,19 +1,66 @@
 @import "../variables.scss";
 
 .left-div {
-    background-color: $color-white;
+  background-color: $color-white;
 }
 .right-div {
-    background-color: $color-red;
-    display: flex;
+  background-color: $color-red;
+  display: flex;
 }
 
 .form-container {
-    position: relative;
-    width: 115% !important;
-    height: 100%;
-    background-color: #4563cd;
-    border-top-left-radius: 550px;
-    border-bottom-left-radius: 550px;
-    margin-left: -10%;
+  position: relative;
+  width: 115% !important;
+  height: 100%;
+  background-color: #4563cd;
+  border-top-left-radius: 550px;
+  border-bottom-left-radius: 550px;
+  margin-left: -10%;
+  display: flex;
+}
+
+.form-grid {
+  margin: auto;
+  font-weight: 600;
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 15%;
+    label {
+      margin: auto;
+      display: block;
+      color: $color-white;
+    }
+
+    input {
+        display: block;
+        margin: auto;
+        border: none;
+        border-radius: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @extend .form-size-elements;
+    }
+  }
+
+  .submit-button {
+      color: $color-white;
+      background: transparent;
+      border: solid 2px $color-white;
+      border-radius: 50px;
+      @extend .form-size-elements;
+      font-weight: 600;
+  }
+}
+
+.form-size-elements {
+    width: 180%;
+    height: 6vh;
+    max-height: 44px;
+}
+
+
+.message-container {
+    font-size: 4rem;
 }
