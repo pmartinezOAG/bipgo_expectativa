@@ -10,7 +10,7 @@ function Home() {
       <div className="title-home">
         Toma<br/><div className="space-txt">la</div><br/><div className='tip-big'><span>mejor</span>desición</div>
       </div>
-      <LefHome />
+      <LefHome/>
       <RightHome />
     </div>
   );

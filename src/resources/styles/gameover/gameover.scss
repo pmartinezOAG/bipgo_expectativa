@@ -49,3 +49,29 @@
     100% { opacity: 1; transform: scale(1); }
 }
 
+// Queries Game Over
+// Portrait
+@media screen and (max-width: 780px) and (orientation: portrait){
+    .game-over{
+        h1{
+            font-size: 3rem;
+            line-height: 2.5rem;
+            padding: 1rem 3rem;
+            border-radius: 7rem;
+        }
+    }
+}
+// Landscape
+@media screen and (max-width: 960px) and (orientation: landscape){
+    .game-over{
+        h1{
+            font-size: 3rem;
+            line-height: 2.5rem;
+            padding: 1rem 3rem;
+            border-radius: 7rem;
+        }
+        p{
+            margin: 30px 0 20px 0;
+        }
+    }
+}

@@ -2,21 +2,24 @@
 
 .left-home{
     min-height: 100vh;
-    background-color: $color-cream; // $color-white;
+    background-color: $color-white;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     .btn_run{
+        width: 50%;
         background: $color-green;
         color:$color-white;
         font-weight: 600;
         font-size: 2rem;
-        padding: 0.7rem 3rem;
+        padding: 1.3rem 0.5rem;
         border-radius: 3rem;
         position: relative;
+        margin-bottom: 5rem;
     }
     .lives{
+        min-width: 280px;
         position:absolute;
         left: 1rem;
         bottom: 1rem;
@@ -115,3 +118,178 @@
       stroke: $color-red !important;
   }
   
+// queries home left
+@media screen and (max-width: 1366px){
+    .left-home{
+        .btn_run{
+            font-size: 1.6rem;  
+            padding: 1rem 0.5rem;
+        }
+    }
+}
+// Portrait
+@media screen and (max-width: 1024px) and (orientation: portrait){
+    .left-home{
+        min-height: 50vh;
+        .btn_run{
+            margin-bottom: 0;
+        }
+        // timer
+        .circle-counter{
+            margin-top: 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) and (orientation: portrait){
+    .left-home{
+        .btn_run{
+            font-size: 1.6rem;
+        }
+        //timer
+        .circle-counter{
+            width: 350px;
+            min-height: 350px;
+            .circle{
+                svg{
+                    width: 350px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) and (orientation: portrait){
+    .left-home{
+        .btn_run{
+            font-size: 1.2rem;
+            padding: 0.8rem 0.5rem;
+        }
+        //timer
+        .circle-counter{
+            width: 280px;
+            min-height: 280px;
+            h1{
+                font-size: 3rem;
+                line-height: 2rem;
+            }
+            h4{
+                font-size: 1.2rem;
+            }
+            h5{
+                font-size: 1.1rem;
+                margin-top: 1.2rem;
+            }
+            .circle{
+                svg{
+                    width: 280px;
+                    .e-c-base {
+                        stroke-width: 7px
+                    }
+                    .e-c-progress {
+                        stroke-width: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) and (orientation: portrait){
+    .left-home{
+        .btn_run{
+           width: 60%;
+           padding: 0.6rem 0.5rem;
+        }
+        //timer
+        .circle-counter{
+            width: 215px;
+            min-height: 215px;
+            margin-top: 4rem;
+            h1{
+                font-size: 2.5rem;
+                line-height: 1.5rem;
+            }
+            h4{
+                font-size: 1rem;
+            }
+            h5{
+                font-size: 0.9rem;
+                margin-top: 0.9rem;
+            }
+            .circle{
+                svg{
+                    width: 215px;
+                }
+            }
+        }
+    }
+}
+// Landscape
+@media screen and (max-width: 960px) and (orientation: landscape){
+    .left-home{
+        .btn_run{
+            font-size: 1.4rem;
+            padding: 0.7rem 0.5rem;
+            margin-bottom: 2rem;
+        }
+        //timer
+        .circle-counter{
+            width: 280px;
+            min-height: 280px;
+            margin-top: 4rem;
+            h1{
+                font-size: 3rem;
+                line-height: 2rem;
+            }
+            h4{
+                font-size: 1.2rem;
+            }
+            h5{
+                font-size: 1.1rem;
+                margin-top: 1.2rem;
+            }
+            .circle{
+                svg{
+                    width: 280px;
+                    .e-c-base {
+                        stroke-width: 7px
+                    }
+                    .e-c-progress {
+                        stroke-width: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 690px) and (orientation: landscape){
+    .left-home{
+        .btn_run{
+            font-size: 1.1rem;
+            padding: 0.5rem 0.5rem;
+        }
+        //timer
+        .circle-counter{
+            width: 215px;
+            min-height: 215px;
+            margin-top: 4rem;
+            h1{
+                font-size: 2.5rem;
+                line-height: 1.5rem;
+            }
+            h4{
+                font-size: 1rem;
+            }
+            h5{
+                font-size: 0.9rem;
+                margin-top: 0.9rem;
+            }
+            .circle{
+                svg{
+                    width: 215px;
+                }
+            }
+        }
+    }
+}
