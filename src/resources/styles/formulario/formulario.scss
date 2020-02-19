@@ -4,6 +4,7 @@
   background-color: $color-white;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", sans-serif;
   display: flex;
+  width: 50%;
 
   .message-container {
     margin-left: 25%;
@@ -50,7 +51,7 @@
     position: absolute;
     left: 4%;
     top: 50%;
-    width: 75%;
+    width: 40%;
   }
 
 
@@ -58,6 +59,7 @@
 .right-div {
   background-color: $color-red;
   display: flex;
+  width: 50%;
 }
 
 .form-container {
