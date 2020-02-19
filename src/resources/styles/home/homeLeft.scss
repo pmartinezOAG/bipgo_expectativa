@@ -7,8 +7,12 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    .btn_run{
+    .content-btn{
+        opacity: 0;
         width: 50%;
+    }
+    .btn_run{
+        width: 100%;
         background: $color-green;
         color:$color-white;
         font-weight: 600;
@@ -17,6 +21,7 @@
         border-radius: 3rem;
         position: relative;
         margin-bottom: 5rem;
+       
     }
     .lives{
         min-width: 280px;
@@ -26,6 +31,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        opacity: 0;
         span{
             font-weight: 600;
             margin-right: 10px;
@@ -196,8 +202,10 @@
 
 @media screen and (max-width: 360px) and (orientation: portrait){
     .left-home{
+        .content-btn{
+            width: 60%;
+        }
         .btn_run{
-           width: 60%;
            padding: 0.6rem 0.5rem;
         }
         //timer

@@ -44,21 +44,21 @@ function RightHome() {
         <div className="right-home">
             <div className="main-container">
 
-                <button className="logo-button">
+                <button className="enter-elements delay-1 logo-button">
                     <Link to="/formulario">
                         <img src={bipgo_logo} alt="Logo Bipgo"></img>
                     </Link>
                 </button>
 
-                <img src={arrow_up} className={`icon-arrow ${bouncing === false ? 'bounce-icon' : ''}`} alt="Up Arrow"    ></img>
+                <img src={arrow_up} className={`enter-elements icon-arrow ${bouncing === false ? 'bounce-icon' : ''}`} alt="Up Arrow"    ></img>
 
-                <div className={`${showDiv === true ? 'principal-message-container' : 'secondary-message-container'} `}>
+                <div className={`enter-elements delay-3 ${showDiv === true ? 'principal-message-container' : 'secondary-message-container'} `}>
                     <div className="intern-margin">
                         <h5> {messages[position].message} </h5>
                     </div>
                 </div>
 
-                <div className={`${showDiv === true ? 'secondary-message-container' : 'principal-message-container'} `}>
+                <div className={`enter-elements ${showDiv === true ? 'secondary-message-container' : 'principal-message-container'} `}>
                     <div className="intern-margin">
                         <h5> {messages[position].message} </h5>
                     </div>

@@ -23,7 +23,7 @@
     position: relative;
     margin: auto;
     margin-top: -20%;
-
+    opacity: 0;
     img {
       width: 50%;
     }
@@ -39,17 +39,18 @@
   .principal-message-container {
     @extend .div-containers;
     margin-left: 0 !important;
+    
   }
 
   .secondary-message-container {
     @extend .div-containers;
-    margin-left: 75% !important;
+    margin-left: 80% !important;
   }
 
   .div-containers {
     position: absolute;
     top: 60%;
-
+    opacity: 0;
     border: solid $color-white 8px;
     border-radius: 135px;
     width: 100%;

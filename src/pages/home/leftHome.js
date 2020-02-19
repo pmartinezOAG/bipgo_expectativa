@@ -54,8 +54,10 @@ function LeftHome() {
     <div  className="left-home">
       {!youLose ? (
           <Fragment>
-            <button className="btn btn_run" onClick={animButtonCV}>Cargar tu cv</button>
-            <div className="lives">
+            <div className="content-btn enter-elements delay-1">
+              <button className="btn btn_run" onClick={animButtonCV}>Cargar tu cv</button>
+            </div>
+            <div className="enter-elements delay-2 lives">
               <span>LIVES:</span>
               <div className="lives_icons">
                   {
