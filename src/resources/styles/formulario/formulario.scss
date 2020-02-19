@@ -1,0 +1,19 @@
+@import "../variables.scss";
+
+.left-div {
+    background-color: $color-white;
+}
+.right-div {
+    background-color: $color-red;
+    display: flex;
+}
+
+.form-container {
+    position: relative;
+    width: 115% !important;
+    height: 100%;
+    background-color: #4563cd;
+    border-top-left-radius: 550px;
+    border-bottom-left-radius: 550px;
+    margin-left: -10%;
+}
