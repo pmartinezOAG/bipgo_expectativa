@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form'
+import axios from 'axios';
 
 import '../../resources/styles/formulario/formulario.scss';
 import Bigo from '../../components/Bigo/bigo';
@@ -7,7 +8,31 @@ import Bigo from '../../components/Bigo/bigo';
 function Formulario() {
 
   const { register, handleSubmit, watch, errors } = useForm()
-  const onSubmit = data => { console.log(data) }
+  const onSubmit = data => {
+
+    let url = 'https://angeldasilva.com/api/bipgo/controllers/landapi.php';
+
+    let formData = new FormData();
+
+    formData.set('name', data['nombres']);
+    formData.set('lastname', data['apellido']);
+    formData.set('email', data['email']);
+
+    const config = {
+      headers: { 'content-type': 'multipart/form-data' }
+    }
+
+    /*axios.post(url, formData, config)
+      .then(response => {
+        
+      })
+      .catch(error => {
+        this.setState({ popUpMessage: 'Intente nuevamente por favor.' });
+      });*/
+  };
+
+
+
 
   return (
     <div className="row content-home no-gutters">
