@@ -181,20 +181,23 @@
 }
 // Landscape
 @media screen and (max-width: 960px) and (orientation: landscape) {
-  .logo-container {
+  .content-home { 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
   }
 
   .send-message-logo-container {
     img {
       width: 40% !important;
-      margin-top: 3% !important;
+      margin-top: 4% !important;
       margin-left: -4% !important;
     }
   }
 
   .icons-container {
     position: absolute;
-    top: 83%;
+    top: 81%;
     left: 47%;
     display: flex;
     width: 15%;
@@ -203,4 +206,11 @@
       width: 37%;
     }
   }
+
+  .text-container {
+    width: 73%;
+    top: 57%;
+    font-size: calc(14px + (20) * ((100vw - 300px) / (1600 - 300)));
+}
+
 }
