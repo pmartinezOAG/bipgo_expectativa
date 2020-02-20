@@ -43,7 +43,7 @@
 
     .big-type {
       width: 0px;
-      font-size: 127%;
+      font-size: 4rem;
       letter-spacing: -7px;
       transition: 0.3s all;
     }
@@ -64,7 +64,7 @@
 
     .little-type {
       font-size: 2rem;
-      margin-top: -17%;
+      margin-top: -11%;
       margin-left: 9%;
     }
   }
@@ -95,7 +95,7 @@
   width: 50%;
   position: absolute;
   left: 50%;
-  height: 100vh;
+  min-height: 100vh;
   transition: 0.3s all;
 }
 
@@ -107,7 +107,7 @@
 .form-container {
   position: relative;
   width: 115% !important;
-  height: 100%;
+  min-height: 100%;
   background-color: #4563cd;
   border-top-left-radius: 550px;
   border-bottom-left-radius: 550px;
@@ -118,15 +118,18 @@
 .form-grid {
   margin: auto;
   font-weight: 600;
-
+  width: 60%;
+  padding: 2rem 0;
   .form-group {
     width: 100%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     opacity: 0;
     label {
       margin: auto;
       display: block;
       color: $color-white;
+      width: 90%;
+      margin-left: 10%;
     }
 
     input {
@@ -153,9 +156,10 @@
 }
 
 .form-size-elements {
-  width: 180%;
+  width: 90%;
   height: 6vh;
   max-height: 44px;
+  margin-left: 10%;
 }
 
 .message-container {
@@ -179,5 +183,183 @@
   100% {
     opacity: 1;
     transform: scale(1, 1);
+  }
+}
+
+// Media queries 
+@media screen and (max-width: 1366px){
+  .left-div {
+    .message-container {
+      .little-type {
+        margin-top: -11%;
+      }
+    }
+  }
+}
+//portrait
+@media screen and (max-width: 1024px) and (orientation: portrait){
+ .content-home{
+   flex-direction: column;
+ }
+ .left-div{
+   width: 100%;
+   min-height: 50vh;
+   flex-direction: column;
+   .paragraph-container {
+    left: 13.5%;
+    top: 22%;
+    width: 73%;
+  }
+  .bigo-container {
+    position: absolute;
+    left: 64%;
+    top: 30%;
+    width: 30%;
+    height: 200px;
+    overflow-y: hidden;
+  }
+ }
+ .right-div{
+  width: 100%;
+  position: relative;
+  left: 0;
+  min-height: 50vh;
+  }  
+  //
+  .form-grid {
+    width: 50%;
+    .form-group {
+      width: 100%;
+      margin-bottom: 7%;
+      opacity: 0;
+      label {
+        width: 100%;
+        margin-left: 0%;
+      }
+    }
+  }
+  
+  .form-size-elements {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 780px) and (orientation: portrait){
+  .content-home{
+    flex-direction: column;
+  }
+  .left-div{
+    width: 100%;
+    min-height: 50vh;
+    flex-direction: column;
+    .paragraph-container {
+     left: 13.5%;
+     top: 22%;
+     width: 73%;
+   }
+   .bigo-container {
+     position: absolute;
+     left: 25%;
+     top: 30%;
+     width: 300px;
+     height: 200px;
+     overflow-y: hidden;
+   }
+  }
+  .right-div{
+   width: 100%;
+   position: relative;
+   left: 0;
+   min-height: 50vh;
+   }  
+   //
+   .form-container {
+      width: 100% !important;
+      border-top-left-radius: 80px;
+      border-bottom-left-radius: 80px;
+      margin-left: 0%;
+    }
+   .form-grid {
+     width: 80%;
+   }
+}
+@media screen and (max-width: 375px) and (orientation: portrait){
+  .left-div{
+   .paragraph-container {
+      left: 10%;
+      top: 22%;
+      width: 80%;
+      font-size: 0.9rem;
+    }
+    .message-container {
+      .big-type {
+        font-size: 3rem;
+        letter-spacing: -3px;
+      }
+      .medium-type span {
+        font-size: 2rem;
+      }
+    }
+   .bigo-container {
+     left: 25%;
+     top: 35%;
+     width: 200px;
+     height: 200px;
+   }
+  }
+}
+
+// landscape
+@media screen and (max-width: 960px) and (orientation: landscape){
+  .left-div{
+    .message-container {
+      left: 2vw;
+    }
+    .message-container {
+      .big-type {
+        font-size: 3rem;
+        letter-spacing: -3px;
+      }
+      .medium-type span {
+        font-size: 2rem;
+      }
+    }
+    .paragraph-container {
+      left: 3%;
+      top: 36%;
+      width: 40%;
+      font-size: 0.9rem;
+    }
+    .bigo-container{
+      top:60%;
+      height: 140px;
+    }
+  }
+  .form-size-elements {
+    height: 8vh;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: landscape){
+  .left-div{
+    .message-container {
+      .big-type {
+        font-size: 2rem;
+        letter-spacing: -3px;
+      }
+      .medium-type span {
+        font-size: 1.5rem;
+      }
+    }
+    .paragraph-container {
+      font-size: 0.8rem;
+    }
+    .bigo-container{
+      top:60%;
+      height: 130px;
+    }
+  }
+  .form-size-elements {
+    height: 8vh;
   }
 }
