@@ -11,6 +11,7 @@ import './App.scss';
 import Home from './pages/home/home';
 import Gameover from './pages/gameover/gameover';
 import Formulario from './pages/formulario/formulario';
+import EnvioCorreo from './pages/verificacion/envioCorreo';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/gameover" component={Gameover} />
         <Route path="/formulario" component={Formulario} />
+        <Route path="/envio-correo" component={EnvioCorreo} />
       </Switch>
     </Router>
   );

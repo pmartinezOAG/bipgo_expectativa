@@ -15,8 +15,8 @@
 }
 
 .hide-div-container {
-  z-index: 0;
-  display: none;
+  z-index: 0 !important;
+  display: none !important;
 }
 
 .left-div {

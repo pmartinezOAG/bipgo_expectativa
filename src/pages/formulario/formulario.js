@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
 
@@ -72,19 +72,23 @@ function Formulario() {
       headers: { 'content-type': 'multipart/form-data' }
     }
 
-    axios.post(url, formData, config)
+    changeDivContainerState(hideLoadingAnimation => !hideLoadingAnimation);
+
+    
+
+    /*axios.post(url, formData, config)
       .then(response => {
         console.log(response);
       })
       .catch(error => {
         console.log(error);
-      });
+      });*/
   };
 
   return (
     <div className="row content-home no-gutters">
 
-      <div className={`animation-container ${hideLoadingAnimation === true ? 'hide-right-div' : ''}`}>
+      <div className={`animation-container ${hideLoadingAnimation === true ? 'hide-div-container' : ''}`}>
         <div className="bigo-container">
           <LoadingBigo />
         </div>
