@@ -7,7 +7,7 @@ import RightHome from './rightHome'
 function Home() {
   return (
     <div className="row content-home no-gutters">
-      <div className="title-home">
+      <div className="enter-elements title-home">
         Toma<br/><div className="space-txt">la</div><br/><div className='tip-big'><span>mejor</span>desición</div>
       </div>
       <LefHome/>
