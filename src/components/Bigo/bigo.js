@@ -12,17 +12,15 @@ class Bigo  extends Component {
      
     constructor(props){
         super(props);
-        this.state = {
-            startAnimation: false
-        }
     }
-
-    
 
     componentDidMount(){
         if (this.props.activeAnimation !== undefined) {
+            console.log(this.props.timeAnimationStart);
             playAnimation = false;
-            setTimeout(() => { animObj.play() }, 2250);
+            setTimeout(() => { animObj.play() }, this.props.timeAnimationStart);
+        }else {
+            playAnimation = true;
         }
 
         const animData= {

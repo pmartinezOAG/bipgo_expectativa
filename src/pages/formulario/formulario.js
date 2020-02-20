@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+
 
 import '../../resources/styles/formulario/formulario.scss';
 import Bigo from '../../components/Bigo/bigo';
@@ -10,6 +12,7 @@ function Formulario() {
 
   const [rightDivAnimation, changeRightDivPosition] = useState(true);
   const [hideLoadingAnimation, changeDivContainerState] = useState(false);
+  const history = useHistory();
 
   const [show1Element, change1Element] = useState(false);
   const [show2Element, change2Element] = useState(false);
@@ -72,17 +75,13 @@ function Formulario() {
       headers: { 'content-type': 'multipart/form-data' }
     }
 
-    changeDivContainerState(hideLoadingAnimation => !hideLoadingAnimation);
-
-    
-
-    /*axios.post(url, formData, config)
+    axios.post(url, formData, config)
       .then(response => {
-        console.log(response);
+        history.push('/envio-correo');
       })
       .catch(error => {
         console.log(error);
-      });*/
+      });
   };
 
   return (
@@ -104,7 +103,7 @@ function Formulario() {
             la
           </div>
           <div className="medium-type">
-            <span>mejor</span> <span className="letra-roja">decisión</span>
+            <span className="letra-roja">mejor</span> <span>decisión</span>
           </div>
         </div>
 
@@ -113,7 +112,7 @@ function Formulario() {
         </div>
 
         <div className="bigo-container">
-          <Bigo activeAnimation={true} />
+          <Bigo activeAnimation={true} timeAnimationStart={2250} />
         </div>
 
 

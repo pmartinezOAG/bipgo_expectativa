@@ -9,7 +9,7 @@ import instagram_logo from '../../resources/images/instragram-icon.png';
 import message_logo from '../../resources/images/message-icon.png';
 import Bigo from '../../components/Bigo/bigo';
 
-function EnvioCorreo() {
+function Verificacion() {
   const [hideLoadingAnimation, changeDivContainerState] = useState(false);
   const [showLogoContainer, changeLogoContainerState] = useState(false);
 
@@ -70,11 +70,11 @@ function EnvioCorreo() {
       </div>
 
       <div className={`message-container ${show4Element === true ? 'back-anim' : ''}`} >
-        <span>¡Gracias por registrarte!</span>
+        <span>¡Gracias por verficar tu correo!</span>
       </div>
 
       <div className={`text-container ${show5Element === true ? 'back-anim' : ''}`} >
-        <span>Hemos enviado un correo de verificación.</span>
+        <span>Te mantendremos informado de nuestra fecha de lanzamiento.</span>
       </div>
 
       <div className={`send-message-logo-container ${show6Element === true ? 'back-anim' : ''}`}>
@@ -98,4 +98,4 @@ function EnvioCorreo() {
 };
 
 
-export default EnvioCorreo;
+export default Verificacion;
