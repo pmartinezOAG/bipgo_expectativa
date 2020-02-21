@@ -54,13 +54,13 @@ function RightHome() {
 
                 <div className={`enter-elements delay-3 ${showDiv === true ? 'principal-message-container' : 'secondary-message-container'} `}>
                     <div className="intern-margin">
-                        <h5> {messages[position].message} </h5>
+                        <h4> {messages[position].message} </h4>
                     </div>
                 </div>
 
                 <div className={`enter-elements ${showDiv === true ? 'secondary-message-container' : 'principal-message-container'} `}>
                     <div className="intern-margin">
-                        <h5> {messages[position].message} </h5>
+                        <h4> {messages[position].message} </h4>
                     </div>
                 </div>
 

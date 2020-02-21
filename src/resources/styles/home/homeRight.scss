@@ -37,12 +37,19 @@
   }
 
   .principal-message-container {
+    span {
+      font-size: calc(14px + (5) * ((100vw - 300px) / (1600 - 300)));
+    }
+
     @extend .div-containers;
     margin-left: 0 !important;
-    
   }
 
   .secondary-message-container {
+    span {
+      font-size: calc(14px + (5) * ((100vw - 300px) / (1600 - 300)));
+    }
+
     @extend .div-containers;
     margin-left: 80% !important;
   }
@@ -71,7 +78,7 @@
       text-align: center;
     }
 
-    h5 {
+    h4 {
       color: $color-white;
       margin: auto;
     }
@@ -116,14 +123,13 @@
 }
 
 // queries home right
-@media screen and (max-width: 1024px) and (orientation: portrait){
-  .right-home{
-      min-height: 50vh;
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .right-home {
+    min-height: 50vh;
   }
 }
 
-
-@media screen and (max-width: 780px) and (orientation: portrait){
+@media screen and (max-width: 780px) and (orientation: portrait) {
   .main-container {
     .secondary-message-container {
       margin-left: 100% !important;
@@ -139,7 +145,7 @@
   }
 }
 
-@media screen and (max-width: 480px) and (orientation: portrait){
+@media screen and (max-width: 480px) and (orientation: portrait) {
   .main-container {
     .logo-button {
       border: solid $color-white 6px;
@@ -149,7 +155,7 @@
       padding-top: 2%;
       .intern-margin {
         width: 60%;
-        h5{
+        h5 {
           font-size: 1.2rem;
         }
       }
@@ -157,7 +163,7 @@
   }
 }
 
-@media screen and (max-width: 350px) and (orientation: portrait){
+@media screen and (max-width: 350px) and (orientation: portrait) {
   .main-container {
     width: 60%;
     .logo-button {
@@ -165,7 +171,7 @@
     }
     .div-containers {
       .intern-margin {
-        h5{
+        h5 {
           font-size: 1rem;
         }
       }
@@ -173,7 +179,7 @@
   }
 }
 // Landscape
-@media screen and (max-width: 960px) and (orientation: landscape){
+@media screen and (max-width: 960px) and (orientation: landscape) {
   .main-container {
     width: 60%;
     .logo-button {
@@ -187,11 +193,10 @@
       padding-top: 2%;
       .intern-margin {
         width: 60%;
-        h5{
+        h5 {
           font-size: 1rem;
         }
       }
     }
   }
 }
-
