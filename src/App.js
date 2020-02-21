@@ -16,7 +16,7 @@ import Verificacion from './pages/verificacion/verificacion';
 
 function App() {
   return (
-    <Router>
+    <Router basename={'/bigo'}>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/gameover" component={Gameover} />

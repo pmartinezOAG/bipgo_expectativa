@@ -19,7 +19,7 @@ function RightHome() {
 
     useEffect(() => {
 
-        setInterval(() => {
+        const interval2 = setInterval(() => {
             changeAnimation(bouncing => !bouncing);
         }, 1500);
 
@@ -37,7 +37,10 @@ function RightHome() {
                 }
             }, 250);
         }, 3000);
-        return () => clearInterval(interval);
+        return () => {
+                clearInterval(interval2)
+                clearInterval(interval)
+            };
     }, []);
 
     return (

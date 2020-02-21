@@ -22,7 +22,7 @@ function Timerpart(props) {
         circle_anim.current.style.strokeDasharray = length;
  }
 
-  if(h1_seconds !=null && timeLeft < 4){
+  if(h1_seconds !=null && timeLeft < 3){
       h1_seconds.current.className = 'color-red';
       title_1.current.className = 'color-red';
       title_2.current.className = 'color-red';
@@ -31,7 +31,7 @@ function Timerpart(props) {
   }
 
   useEffect( ()=> {
-    var progress = timeLeft * 10 / 100;
+    var progress = (timeLeft * 10)*2 / 100;
     var dashOffset = length * (1 - progress);
     circle_anim.current.style.strokeDashoffset = dashOffset;
     

@@ -72,7 +72,7 @@ function LeftHome() {
             
           </Fragment>
         ):(
-          <Timer seconds={10} userStatus={gameStatus}/>
+          <Timer seconds={5} userStatus={gameStatus}/>
         )
       }
       
