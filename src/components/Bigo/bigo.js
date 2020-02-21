@@ -16,7 +16,6 @@ class Bigo  extends Component {
 
     componentDidMount(){
         if (this.props.activeAnimation !== undefined) {
-            console.log(this.props.timeAnimationStart);
             playAnimation = false;
             setTimeout(() => { animObj.play() }, this.props.timeAnimationStart);
         }else {

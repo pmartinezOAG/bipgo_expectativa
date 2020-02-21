@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
 
 
 import '../../resources/styles/formulario/formulario.scss';
 import Bigo from '../../components/Bigo/bigo';
 import LoadingBigo from '../../components/Bigo/bigo-loading';
 
-function Formulario() {
+function Formulario(props) {
 
   const [rightDivAnimation, changeRightDivPosition] = useState(true);
   const [hideLoadingAnimation, changeDivContainerState] = useState(false);
-  const history = useHistory();
 
   const [show1Element, change1Element] = useState(false);
   const [show2Element, change2Element] = useState(false);
@@ -63,7 +61,9 @@ function Formulario() {
   const { register, handleSubmit, watch, errors } = useForm()
   const onSubmit = data => {
 
-    let url = 'https://bipbe.azurewebsites.net/controllers/landapi.php';
+    props.history.push('/envio-correo');
+
+    /*let url = 'https://bipbe.azurewebsites.net/controllers/landapi.php';
 
     let formData = new FormData();
 
@@ -81,7 +81,7 @@ function Formulario() {
       })
       .catch(error => {
         console.log(error);
-      });
+      });*/
   };
 
   return (

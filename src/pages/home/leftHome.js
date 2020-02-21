@@ -1,5 +1,4 @@
 import React ,{ useState, Fragment } from 'react';
-import {useHistory} from 'react-router-dom';
 
 // components
 import Timer from './timer';
@@ -16,8 +15,7 @@ import Bigo from '../../components/Bigo/bigo';
 
 let num_lives = 3;
 
-function LeftHome() {
-  const history = useHistory();
+function LeftHome(props) {
 
   const [lives, setLives] = useState([
     {id: 'live1', src: bipgo_iso, hasLife:true },
@@ -47,7 +45,7 @@ function LeftHome() {
 
   // check game status, if user lose
   const gameStatus = (status) => {
-    history.push('./gameover');
+    props.history.push('/gameover');
   }
 
   return (

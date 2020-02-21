@@ -1,5 +1,4 @@
 import React  from 'react';
-import { useHistory } from 'react-router-dom';
 
 // style
 import '../../resources/styles/gameover/gameover.scss';
@@ -7,11 +6,10 @@ import '../../resources/styles/gameover/gameover.scss';
 
 
 
-function Gameover() {
-  const history = useHistory();  
+function Gameover(props) {
 
   const goHome = () =>{
-    history.push('/');
+    props.history.push('/');
   }  
 
   return (
