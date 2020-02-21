@@ -61,9 +61,7 @@ function Formulario(props) {
   const { register, handleSubmit, watch, errors } = useForm()
   const onSubmit = data => {
 
-    props.history.push('/envio-correo');
-
-    /*let url = 'https://bipbe.azurewebsites.net/controllers/landapi.php';
+    let url = 'https://bipbe.azurewebsites.net/controllers/landapi.php';
 
     let formData = new FormData();
 
@@ -77,11 +75,11 @@ function Formulario(props) {
 
     axios.post(url, formData, config)
       .then(response => {
-        history.push('/envio-correo');
+        props.history.push('/envio-correo');
       })
       .catch(error => {
         console.log(error);
-      });*/
+      });
   };
 
   return (

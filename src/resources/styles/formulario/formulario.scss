@@ -43,7 +43,7 @@
 
     .big-type {
       width: 0px;
-      font-size: 4rem;
+      font-size: calc(14px + (80) * ((100vw - 300px) / (1600 - 300)));
       letter-spacing: -7px;
       transition: 0.3s all;
     }
@@ -51,21 +51,21 @@
     .medium-type {
       display: flex;
       margin-top: -8%;
-      margin-left: 8%;
+      margin-left: 4%;
 
       .letra-roja {
         color: $color-red;
       }
 
       span {
-        font-size: 2.4rem;
+        font-size: calc(14px + (34) * ((100vw - 300px) / (1600 - 300)));
       }
     }
 
     .little-type {
       font-size: 2rem;
       margin-top: -11%;
-      margin-left: 9%;
+      margin-left: 5%;
     }
   }
 
@@ -82,11 +82,13 @@
   }
 
   .bigo-container {
-    position: absolute;
-    left: 4%;
-    top: 50%;
-    width: 40%;
+    position: relative;
+    left: 8%;
+    top: 44%;
+    width: 80%;
+    max-height: 56vh;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
 }
 .right-div {
@@ -361,5 +363,13 @@
   }
   .form-size-elements {
     height: 8vh;
+  }
+}
+
+
+@media screen and (min-width: 768px) { 
+
+  .paragraph-container span{
+    font-size: calc(14px + (5) * ((100vw - 300px) / (1600 - 300)));
   }
 }

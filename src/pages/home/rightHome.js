@@ -50,7 +50,7 @@ function RightHome() {
                     </Link>
                 </button>
 
-                <img src={arrow_up} className={`enter-elements icon-arrow ${bouncing === false ? 'bounce-icon' : ''}`} alt="Up Arrow"    ></img>
+                <img src={arrow_up} className={`enter-elements icon-arrow ${bouncing === false ? '' : 'bounce-icon'}`} alt="Up Arrow"    ></img>
 
                 <div className={`enter-elements delay-3 ${showDiv === true ? 'principal-message-container' : 'secondary-message-container'} `}>
                     <div className="intern-margin">

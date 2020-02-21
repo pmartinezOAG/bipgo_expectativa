@@ -78,12 +78,12 @@ function Verificacion() {
       </div>
 
       <div className={`send-message-logo-container ${show6Element === true ? 'back-anim' : ''}`}>
-        <img src={message_logo}></img>
+        <img src={message_logo} alt="Mensaje logo"></img>
       </div>
 
       <div className="icons-container">
-        <img className={show3Element === true ? 'back-anim' : ''} src={facebook_logo}></img>
-        <img className={show2Element === true ? 'back-anim' : ''} src={instagram_logo}></img>
+        <img className={show3Element === true ? 'back-anim' : ''} src={facebook_logo} alt="Facebook logo"></img>
+        <img className={show2Element === true ? 'back-anim' : ''} src={instagram_logo} alt="Instagram logo"></img>
       </div>
 
       <div className="div-bigo">
