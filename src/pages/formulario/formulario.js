@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
-
+import { useHistory } from 'react-router-dom';
 
 import '../../resources/styles/formulario/formulario.scss';
 import Bigo from '../../components/Bigo/bigo';
 import LoadingBigo from '../../components/Bigo/bigo-loading';
 
 function Formulario(props) {
+
+  const history = useHistory();
 
   const [rightDivAnimation, changeRightDivPosition] = useState(true);
   const [hideLoadingAnimation, changeDivContainerState] = useState(false);
@@ -75,7 +77,7 @@ function Formulario(props) {
 
     axios.post(url, formData, config)
       .then(response => {
-        props.history.push('/envio-correo');
+        history.push('/envio-correo');
       })
       .catch(error => {
         console.log(error);

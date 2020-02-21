@@ -188,8 +188,8 @@
   }
 }
 
-// Media queries 
-@media screen and (max-width: 1366px){
+// Media queries
+@media screen and (max-width: 1366px) {
   .left-div {
     .message-container {
       .little-type {
@@ -199,34 +199,34 @@
   }
 }
 //portrait
-@media screen and (max-width: 1024px) and (orientation: portrait){
- .content-home{
-   flex-direction: column;
- }
- .left-div{
-   width: 100%;
-   min-height: 50vh;
-   flex-direction: column;
-   .paragraph-container {
-    left: 13.5%;
-    top: 22%;
-    width: 73%;
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .content-home {
+    flex-direction: column;
   }
-  .bigo-container {
-    position: absolute;
-    left: 64%;
-    top: 30%;
-    width: 30%;
-    height: 200px;
-    overflow-y: hidden;
+  .left-div {
+    width: 100%;
+    min-height: 50vh;
+    flex-direction: column;
+    .paragraph-container {
+      left: 13.5%;
+      top: 22%;
+      width: 73%;
+    }
+    .bigo-container {
+      position: absolute;
+      left: 64%;
+      top: 30%;
+      width: 30%;
+      height: 200px;
+      overflow-y: hidden;
+    }
   }
- }
- .right-div{
-  width: 100%;
-  position: relative;
-  left: 0;
-  min-height: 50vh;
-  }  
+  .right-div {
+    width: 100%;
+    position: relative;
+    left: 0;
+    min-height: 50vh;
+  }
   //
   .form-grid {
     width: 50%;
@@ -240,55 +240,55 @@
       }
     }
   }
-  
+
   .form-size-elements {
     width: 100%;
     margin-left: 0;
   }
 }
 
-@media screen and (max-width: 780px) and (orientation: portrait){
-  .content-home{
+@media screen and (max-width: 780px) and (orientation: portrait) {
+  .content-home {
     flex-direction: column;
   }
-  .left-div{
+  .left-div {
     width: 100%;
     min-height: 50vh;
     flex-direction: column;
     .paragraph-container {
-     left: 13.5%;
-     top: 22%;
-     width: 73%;
-   }
-   .bigo-container {
-     position: absolute;
-     left: 25%;
-     top: 30%;
-     width: 300px;
-     height: 200px;
-     overflow-y: hidden;
-   }
-  }
-  .right-div{
-   width: 100%;
-   position: relative;
-   left: 0;
-   min-height: 50vh;
-   }  
-   //
-   .form-container {
-      width: 100% !important;
-      border-top-left-radius: 80px;
-      border-bottom-left-radius: 80px;
-      margin-left: 0%;
+      left: 13.5%;
+      top: 22%;
+      width: 73%;
     }
-   .form-grid {
-     width: 80%;
-   }
+    .bigo-container {
+      position: absolute;
+      left: 25%;
+      top: 30%;
+      width: 300px;
+      height: 200px;
+      overflow-y: hidden;
+    }
+  }
+  .right-div {
+    width: 100%;
+    position: relative;
+    left: 0;
+    min-height: 50vh;
+  }
+  //
+  .form-container {
+    width: 100% !important;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    margin-left: 0%;
+  }
+  .form-grid {
+    width: 80%;
+  }
 }
-@media screen and (max-width: 375px) and (orientation: portrait){
-  .left-div{
-   .paragraph-container {
+@media screen and (max-width: 375px) and (orientation: portrait) {
+  .left-div {
+    .paragraph-container {
       left: 10%;
       top: 22%;
       width: 80%;
@@ -303,18 +303,18 @@
         font-size: 2rem;
       }
     }
-   .bigo-container {
-     left: 25%;
-     top: 35%;
-     width: 200px;
-     height: 200px;
-   }
+    .bigo-container {
+      left: 25%;
+      top: 35%;
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
 // landscape
-@media screen and (max-width: 960px) and (orientation: landscape){
-  .left-div{
+@media screen and (max-width: 960px) and (orientation: landscape) {
+  .left-div {
     .message-container {
       left: 2vw;
     }
@@ -333,8 +333,8 @@
       width: 40%;
       font-size: 0.9rem;
     }
-    .bigo-container{
-      top:60%;
+    .bigo-container {
+      top: 60%;
       height: 140px;
     }
   }
@@ -342,8 +342,8 @@
     height: 8vh;
   }
 }
-@media screen and (max-width: 600px) and (orientation: landscape){
-  .left-div{
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .left-div {
     .message-container {
       .big-type {
         font-size: 2rem;
@@ -356,8 +356,8 @@
     .paragraph-container {
       font-size: 0.8rem;
     }
-    .bigo-container{
-      top:60%;
+    .bigo-container {
+      top: 60%;
       height: 130px;
     }
   }
@@ -366,10 +366,8 @@
   }
 }
 
-
-@media screen and (min-width: 768px) { 
-
-  .paragraph-container span{
+@media screen and (min-width: 768px) {
+  .paragraph-container span {
     font-size: calc(14px + (5) * ((100vw - 300px) / (1600 - 300)));
   }
 }
